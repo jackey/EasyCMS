@@ -12,6 +12,7 @@ class GalleryModule extends \yii\easyii\components\Module
         'title' => [
             'en' => 'Photo Gallery',
             'ru' => 'Фотогалерея',
+            'zh-hans' => '相册',
         ],
         'icon' => 'camera',
         'order_num' => 90,
