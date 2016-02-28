@@ -2,7 +2,7 @@
 return [
     'Control Panel' => '控制面板',
     'Welcome' => '欢迎',
-    'Welcome to control panel, choose which section you want to manage in left menu.' => '欢迎，请使用左边导航进入对应功能',
+    'Welcome to control panel, choose which section you want to manage in left menu.' => '欢迎来到后台控制台，请使用左边导航进入对应功能',
     'Incorrect username or password.' => '用户名或密码不正确.',
     'You tried to login too often. Please wait 5 minutes.' => '您错误登录次数太频繁，请5分钟后再试',
     'Class does not exist' => '类不存在',
