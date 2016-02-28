@@ -7,7 +7,7 @@ class FileModule extends \yii\easyii\components\Module
         'title' => [
             'en' => 'Files',
             'ru' => 'Файлы',
-            'zh-hans' => '文件',
+            'zh' => '文件',
         ],
         'icon' => 'floppy-disk',
         'order_num' => 30,

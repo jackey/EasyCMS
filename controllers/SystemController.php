@@ -4,6 +4,8 @@ namespace yii\easyii\controllers;
 use Yii;
 use yii\easyii\helpers\WebConsole;
 use yii\easyii\models\Setting;
+use yii\easyii\helpers\Data;
+use yii\easyii\models\Module;
 
 class SystemController extends \yii\easyii\components\Controller
 {
@@ -64,5 +66,28 @@ class SystemController extends \yii\easyii\components\Controller
             }
         }
         return rmdir($directory);
+    }
+
+    public function actionClearModuleSettings() {
+        $activedModules = \yii\easyii\models\Module::findAllActive();
+        $language = Data::getLocale();
+        foreach(glob(Yii::getAlias('@easyii'). DIRECTORY_SEPARATOR .'modules/*') as $module) {
+
+            $moduleName = basename($module);
+            $moduleClass = 'yii\easyii\modules\\' . $moduleName . '\\' . ucfirst($moduleName) . 'Module';
+            $moduleConfig = $moduleClass::$installConfig;
+
+            $installedModule = $activedModules[$moduleName];
+            $module = Module::findOne($installedModule->module_id);
+
+            $module->title =  !empty($moduleConfig['title'][$language]) ? $moduleConfig['title'][$language] : $moduleConfig['title']['en'];
+            $module->settings = Yii::createObject($moduleClass, [$moduleName])->settings;
+            $module->order_num = $moduleConfig['order_num'];
+            $module->icon = $moduleConfig['icon'];
+            $module->status =  Module::STATUS_ON;
+
+            $module->save();
+        }
+        return $this->back();
     }
 }

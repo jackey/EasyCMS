@@ -20,7 +20,7 @@ class GuestbookModule extends \yii\easyii\components\Module
         'title' => [
             'en' => 'Guestbook',
             'ru' => 'Гостевая книга',
-            'zh-hans' => '留言本',
+            'zh' => '留言本'
         ],
         'icon' => 'book',
         'order_num' => 80,

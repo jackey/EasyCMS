@@ -29,7 +29,15 @@ return [
                     'fileMap' => [
                         'easyii' => 'admin.php',
                     ]
-                ]
+                ],
+                'easycms' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@easyii/messages',
+                    'fileMap' => [
+                        'easycms' => 'admin.php',
+                    ],
+                ],
             ],
         ],
         'formatter' => [

@@ -9,7 +9,7 @@ class PageModule extends \yii\easyii\components\Module
         'title' => [
             'en' => 'Pages',
             'ru' => 'Страницы',
-            'zh-hans' => '页面',
+            'zh' => '页面',
         ],
         'icon' => 'file',
         'order_num' => 50,

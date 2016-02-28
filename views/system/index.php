@@ -22,3 +22,5 @@ $this->title = Yii::t('easyii', 'System');
 <p>
     <a href="<?= Url::to(['/admin/system/clear-assets']) ?>" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i> <?= Yii::t('easyii', 'Clear assets') ?></a>
 </p>
+
+<p><a href="<?= Url::to('/admin/system/clear-module-settings') ?>" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i><?= Yii::t('easycms', 'Clear Module Settings')?></a></p>

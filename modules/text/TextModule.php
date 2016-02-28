@@ -7,6 +7,7 @@ class TextModule extends \yii\easyii\components\Module
         'title' => [
             'en' => 'Text blocks',
             'ru' => 'Текстовые блоки',
+            'zh' => '文本'
         ],
         'icon' => 'font',
         'order_num' => 20,

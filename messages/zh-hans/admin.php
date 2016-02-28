@@ -124,5 +124,7 @@ return [
     'Clear image' => '清除图片',
     'Image cleared' => '图片已被清除',
 
+    'Clear Module Settings' => '清除模块配置缓存',
+
 
 ];
